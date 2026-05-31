@@ -2,9 +2,9 @@
 .terraform.lock.hcl
 terraform.tfstate
 terraform.tfstate.backup
-main.tf
-output.tf
-providers.tf
-terraform.tfvars
-variable.tf
-version.tf
+/main.tf
+/output.tf
+/providers.tf
+/terraform.tfvars
+/variable.tf
+/version.tf
