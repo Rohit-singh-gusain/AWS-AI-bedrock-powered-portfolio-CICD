@@ -5,6 +5,9 @@
 
 ---
 
+<img width="1920" height="960" alt="image" src="https://github.com/user-attachments/assets/00c8afc3-8c89-4a6b-af50-459d0358f902" />
+
+
 ## 📌 Project Overview
 
 This project demonstrates a fully automated DevOps workflow where every push to the `main` branch triggers a GitHub Actions pipeline that syncs the latest portfolio files directly to an AWS S3 static website bucket — no manual uploads, no AWS Console clicks.
