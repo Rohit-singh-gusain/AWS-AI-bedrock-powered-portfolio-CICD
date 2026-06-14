@@ -1,9 +1,4 @@
-// ═══════════════════════════════════════════════
-//  Rohit Singh Gusain — Portfolio Script
-//  Scroll Reveal · Navbar · Terminal · Chatbox
-// ═══════════════════════════════════════════════
 
-// ── Scroll Reveal ────────────────────────────────
 const revealObserver = new IntersectionObserver(
   entries => entries.forEach(e => {
     if (e.isIntersecting) e.target.classList.add('visible');
@@ -12,21 +7,18 @@ const revealObserver = new IntersectionObserver(
 );
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// ── Navbar shadow on scroll ──────────────────────
+
 window.addEventListener('scroll', () => {
   document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// ── Terminal cursor blink ────────────────────────
+
 setInterval(() => {
   const c = document.querySelector('.t-cursor');
   if (c) c.style.opacity = c.style.opacity === '0' ? '1' : '0';
 }, 530);
 
-// ── Chatbox ──────────────────────────────────────
 
-// ⚠️  DO NOT edit this line manually
-// This value is automatically injected by GitHub Actions from Terraform output "chat_api_url"
 const API_URL = 'REPLACE_WITH_API_URL';
 
 const fab      = document.getElementById('chatFab');
@@ -41,7 +33,7 @@ let chatOpen   = false;
 const ICON_CHAT = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`;
 const ICON_CLOSE = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`;
 
-// Toggle chat open / close
+
 function toggleChat() {
   chatOpen = !chatOpen;
   win.classList.toggle('open', chatOpen);
@@ -52,7 +44,7 @@ function toggleChat() {
 fab.addEventListener('click', toggleChat);
 closeBtn.addEventListener('click', toggleChat);
 
-// Suggestion chips
+
 document.querySelectorAll('.suggestion-chip').forEach(chip => {
   chip.addEventListener('click', () => {
     sendMessage(chip.textContent.trim());
@@ -60,7 +52,7 @@ document.querySelectorAll('.suggestion-chip').forEach(chip => {
   });
 });
 
-// Send on button click or Enter key
+
 sendBtn.addEventListener('click', () => sendMessage(input.value));
 input.addEventListener('keydown', e => {
   if (e.key === 'Enter' && !e.shiftKey) {
@@ -69,7 +61,7 @@ input.addEventListener('keydown', e => {
   }
 });
 
-// ── Core send function ───────────────────────────
+
 async function sendMessage(text) {
   const prompt = text.trim();
   if (!prompt) return;
@@ -115,7 +107,7 @@ async function sendMessage(text) {
   input.focus();
 }
 
-// ── Helpers ──────────────────────────────────────
+
 function appendBubble(role, text) {
   const wrap = document.createElement('div');
   wrap.className = `chat-msg ${role}`;
