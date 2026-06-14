@@ -26,6 +26,7 @@ jobs:
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.7.0
+          terraform_wrapper: false        # ← disables the wrapper that pollutes output
 
       - name: Terraform Init
         run: terraform init -backend-config="bucket=rohit-luffy-portfolio-tfstate"
