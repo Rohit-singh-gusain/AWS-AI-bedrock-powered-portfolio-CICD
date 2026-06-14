@@ -1,4 +1,9 @@
+// ═══════════════════════════════════════════════
+//  Rohit Singh Gusain — Portfolio Script
+//  Scroll Reveal · Navbar · Terminal · Chatbox
+// ═══════════════════════════════════════════════
 
+// ── Scroll Reveal ────────────────────────────────
 const revealObserver = new IntersectionObserver(
   entries => entries.forEach(e => {
     if (e.isIntersecting) e.target.classList.add('visible');
@@ -20,7 +25,9 @@ setInterval(() => {
 
 // ── Chatbox ──────────────────────────────────────
 
-const API_URL = 'https://op8fb8h75j.execute-api.us-east-1.amazonaws.com/chat';
+// ⚠️  DO NOT edit this line manually
+// This value is automatically injected by GitHub Actions from Terraform output "chat_api_url"
+const API_URL = 'REPLACE_WITH_API_URL';
 
 const fab      = document.getElementById('chatFab');
 const win      = document.getElementById('chatWindow');
@@ -67,7 +74,6 @@ async function sendMessage(text) {
   const prompt = text.trim();
   if (!prompt) return;
 
-  // Remove suggestion chips after first real message
   document.querySelector('.chat-suggestions')?.remove();
 
   appendBubble('user', prompt);
@@ -92,7 +98,6 @@ async function sendMessage(text) {
 
     const data = await res.json();
 
-    // Flexible — works with { reply }, { message }, { response }, { answer }, or raw string
     const reply =
       (typeof data === 'string' ? data : null) ||
       data.reply || data.message || data.response || data.answer ||
@@ -133,7 +138,7 @@ function appendTyping() {
 }
 
 function setLoading(state) {
-  sendBtn.disabled    = state;
-  input.disabled      = state;
+  sendBtn.disabled      = state;
+  input.disabled        = state;
   sendBtn.style.opacity = state ? '0.5' : '1';
 }

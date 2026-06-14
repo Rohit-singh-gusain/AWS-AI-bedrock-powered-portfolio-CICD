@@ -1,27 +1,48 @@
-
 name: deploying to aws s3
 
 on:
   push:
-    branch:
-    - main
+    branches:
+      - main
 
 jobs:
   deploy:
     name: Deploy to AWS S3
     runs-on: ubuntu-latest
- 
+
     steps:
-      
+
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: configure AWS credentials
-        uses:  aws-actions/configure-aws-credentials@v4
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-access-key-id:     ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region:            ${{ secrets.AWS_REGION }}
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.7.0
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
+
+      - name: Get API Gateway URL from Terraform Output
+        run: |
+          API_URL=$(terraform output -raw chat_api_url)
+          echo "API_URL=$API_URL" >> $GITHUB_ENV
+          echo "Fetched API URL: $API_URL"
+
+      - name: Inject API URL into script.js
+        run: |
+          sed -i "s|REPLACE_WITH_API_URL|${{ env.API_URL }}|g" script.js
+          echo "Injected: ${{ env.API_URL }} → script.js"
 
       - name: Deploy to S3
         run: |
@@ -29,8 +50,5 @@ jobs:
             --exclude "*" \
             --include "*.html" \
             --include "*.css" \
+            --include "*.js" \
             --delete
- 
-      
- 
-
