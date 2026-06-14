@@ -1,8 +1,4 @@
-.terraform
+.terraform/
 .terraform.lock.hcl
 terraform.tfstate
 terraform.tfstate.backup
-/providers.tf
-/terraform.tfvars
-/variable.tf
-/version.tf
