@@ -26,7 +26,7 @@ jobs:
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.7.0
-          terraform_wrapper: false        # ← disables the wrapper that pollutes output
+          terraform_wrapper: false
 
       - name: Terraform Init
         run: terraform init -backend-config="bucket=rohit-luffy-portfolio-tfstate"
@@ -34,11 +34,14 @@ jobs:
       - name: Terraform Apply
         run: terraform apply -auto-approve
 
+      - name: Terraform Refresh (force outputs into state)
+        run: terraform apply -refresh-only -auto-approve
+
       - name: Get API Gateway URL from Terraform Output
         run: |
-          API_URL=$(terraform output -raw chat_api_url)
-          echo "API_URL=$API_URL" >> $GITHUB_ENV
+          API_URL=$(terraform output -raw chat_api_url 2>/dev/null)
           echo "Fetched API URL: $API_URL"
+          echo "API_URL=$API_URL" >> $GITHUB_ENV
 
       - name: Inject API URL into script.js
         run: |
