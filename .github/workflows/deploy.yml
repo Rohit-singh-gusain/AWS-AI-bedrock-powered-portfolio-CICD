@@ -34,12 +34,9 @@ jobs:
       - name: Terraform Apply
         run: terraform apply -auto-approve
 
-      - name: Terraform Refresh (force outputs into state)
-        run: terraform apply -refresh-only -auto-approve
-
       - name: Get API Gateway URL from Terraform Output
         run: |
-          API_URL=$(terraform output -raw chat_api_url 2>/dev/null)
+          API_URL=$(terraform output -json | python3 -c "import sys,json; print(json.load(sys.stdin)['chat_api_url']['value'])")
           echo "Fetched API URL: $API_URL"
           echo "API_URL=$API_URL" >> $GITHUB_ENV
 
