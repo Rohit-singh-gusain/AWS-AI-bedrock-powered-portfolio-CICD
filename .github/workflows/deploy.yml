@@ -28,12 +28,10 @@ jobs:
           terraform_version: 1.7.0
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -backend-config="bucket=rohit-luffy-portfolio-tfstate"
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
-        env:
-          TF_VAR_aws_region: ${{ secrets.AWS_REGION }}
 
       - name: Get API Gateway URL from Terraform Output
         run: |
@@ -44,7 +42,7 @@ jobs:
       - name: Inject API URL into script.js
         run: |
           sed -i "s|REPLACE_WITH_API_URL|${{ env.API_URL }}|g" script.js
-          echo "Injected: ${{ env.API_URL }} → script.js"
+          echo "Injected: ${{ env.API_URL }} into script.js"
 
       - name: Deploy to S3
         run: |
