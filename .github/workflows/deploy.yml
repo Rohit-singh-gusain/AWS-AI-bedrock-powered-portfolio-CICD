@@ -34,6 +34,9 @@ jobs:
       - name: Terraform Apply
         run: terraform apply -auto-approve
 
+      - name: Debug Terraform Outputs
+        run: terraform output -json
+
       - name: Get API Gateway URL from Terraform Output
         run: |
           API_URL=$(terraform output -json | python3 -c "import sys,json; print(json.load(sys.stdin)['chat_api_url']['value'])")
