@@ -1,180 +1,241 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ROHIT SINGH GUSAIN — AWS Cloud Engineer</title>
+  <title>Rohit Singh Gusain — Cloud & DevOps Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-<!-- ─── NAV ─────────────────────────────────────── -->
-<nav>
+<!-- ── NAV ─────────────────────────────────────────── -->
+<nav id="navbar">
   <a class="nav-logo" href="#hero">RSG</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
+    <li><a href="#certifications">Certs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <a href="mailto:rohitgusain9930@gmail.com" class="nav-cta">Hire Me</a>
 </nav>
 
-<!-- ─── HERO ─────────────────────────────────────── -->
+<!-- ── HERO ────────────────────────────────────────── -->
 <section id="hero">
-  <div class="hero-grid">
-
-    <div class="hero-content">
-      <div class="hero-badge"><span></span>Open to Opportunities</div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Cloud / DevOps Roles
+      </div>
       <h1 class="hero-title">
-        Hi, I'm
-        <span class="name">ROHIT SINGH GUSAIN</span>
+        Rohit Singh<br/>
+        <span class="hero-name-accent">Gusain</span>
       </h1>
-      <p class="hero-subtitle">AWS Cloud Engineer &nbsp;·&nbsp; DevOps Enthusiast &nbsp;·&nbsp; BCA Graduate</p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View Projects →</a>
-        <a href="#contact" class="btn btn-outline">GET IN TOUCH</a>
+      <p class="hero-role">AWS Cloud &amp; DevOps Engineer</p>
+      <p class="hero-bio">
+        BCA graduate with hands-on AWS experience — provisioning infra with Terraform,
+        automating deployments via GitHub Actions, and containerizing workloads with Docker.
+        I build things, ship them, and make sure they stay up.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">See My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+      <div class="hero-chips">
+        <span class="chip">☁️ AWS Certified</span>
+        <span class="chip">🔧 Terraform IaC</span>
+        <span class="chip">🐳 Docker</span>
+        <span class="chip">⚙️ CI/CD</span>
+        <span class="chip">🇯🇵 JLPT N5</span>
       </div>
     </div>
 
-    <div class="hero-visual">
-      <div class="hero-card">
-        <div class="cloud-icon-grid">
-          <div class="cloud-badge"><span class="icon">☁️</span>AWS EC2</div>
-          <div class="cloud-badge"><span class="icon">🪣</span>S3</div>
-          <div class="cloud-badge"><span class="icon">🐳</span>Docker</div>
-          <div class="cloud-badge"><span class="icon">🔧</span>Terraform</div>
-          <div class="cloud-badge"><span class="icon">⚙️</span>GitHub Actions</div>
-          <div class="cloud-badge"><span class="icon">🔒</span>IAM / VPC</div>
-          <div class="cloud-badge"><span class="icon">🌐</span>Route 53</div>
-          <div class="cloud-badge"><span class="icon">λ</span>Lambda</div>
-          <div class="cloud-badge"><span class="icon">🗄️</span>RDS</div>
+    <div class="hero-right">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">rohit@aws ~ terraform apply</span>
         </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <div class="stat-num">2+</div>
-            <div class="stat-lbl">AWS Projects</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">10+</div>
-            <div class="stat-lbl">AWS Services</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">IaC</div>
-            <div class="stat-lbl">Terraform</div>
-          </div>
+        <div class="terminal-body">
+          <p><span class="t-green">✔</span> aws_vpc.main <span class="t-muted">created</span></p>
+          <p><span class="t-green">✔</span> aws_subnet.public <span class="t-muted">created</span></p>
+          <p><span class="t-green">✔</span> aws_lb.alb <span class="t-muted">created</span></p>
+          <p><span class="t-green">✔</span> aws_instance.ec2 <span class="t-muted">created</span></p>
+          <p><span class="t-green">✔</span> aws_lambda_function.guardian <span class="t-muted">created</span></p>
+          <p><span class="t-green">✔</span> aws_cloudwatch_event_rule.daily <span class="t-muted">created</span></p>
+          <p><span class="t-green">✔</span> aws_sns_topic.alerts <span class="t-muted">created</span></p>
+          <p class="t-blank">&nbsp;</p>
+          <p><span class="t-accent">Apply complete!</span> <span class="t-muted">7 added, 0 changed, 0 destroyed.</span></p>
+          <p class="t-cursor">█</p>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-num">3+</div>
+          <div class="stat-lbl">AWS Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">12+</div>
+          <div class="stat-lbl">AWS Services</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">100%</div>
+          <div class="stat-lbl">IaC Driven</div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
-<hr class="divider">
-
-<!-- ─── ABOUT ────────────────────────────────────── -->
+<!-- ── ABOUT ───────────────────────────────────────── -->
 <section id="about">
   <div class="section-inner">
-    <div class="section-tag">About Me</div>
+    <div class="section-eyebrow">About</div>
     <h2 class="section-title">Who I Am</h2>
     <div class="about-grid reveal">
       <div class="about-text">
-        <p>I'm a BCA graduate and aspiring Cloud Engineer with hands-on experience in Linux, Docker, AWS, and CI/CD pipelines. I enjoy deploying full-stack applications, including MERN stack projects, while continuously improving my cloud and DevOps skills through practical projects and real-world deployment workflows.</p>
-        <p>Passionate about problem-solving and infrastructure technologies, I'm focused on growing into a reliable cloud engineering professional — someone who builds systems that are scalable, secure, and maintainable.</p>
+        <p>I'm a motivated BCA graduate from Dev Bhoomi Uttarakhand University with practical expertise in AWS cloud infrastructure, DevOps tooling, and Infrastructure as Code. I've independently designed and deployed production-grade cloud environments — from VPC networking and EC2 fleets to serverless Lambda pipelines and automated CI/CD workflows.</p>
+        <p>My approach is simple: build it properly, automate everything, secure it by default. I'm actively pursuing entry-level Cloud Engineer or DevOps Engineer roles where I can contribute, learn fast, and deliver real value.</p>
       </div>
-      <ul class="info-list">
-        <li><span class="icon">🎓</span><span class="label">Education</span><span class="value">BCA Graduate</span></li>
-        <li><span class="icon">📍</span><span class="label">Status</span><span class="value">Fresher / Open to Work</span></li>
-        <li><span class="icon">⚡</span><span class="label">Focus</span><span class="value">Cloud &amp; DevOps</span></li>
-        <li><span class="icon">🌐</span><span class="label">Platform</span><span class="value">AWS, Linux, Docker</span></li>
-      </ul>
+      <div class="about-details">
+        <div class="detail-row">
+          <span class="detail-icon">📍</span>
+          <div>
+            <div class="detail-label">Location</div>
+            <div class="detail-val">Dehradun, Uttarakhand</div>
+          </div>
+        </div>
+        <div class="detail-row">
+          <span class="detail-icon">🎓</span>
+          <div>
+            <div class="detail-label">Education</div>
+            <div class="detail-val">BCA — Dev Bhoomi Uttarakhand University (2023–2026)</div>
+          </div>
+        </div>
+        <div class="detail-row">
+          <span class="detail-icon">📞</span>
+          <div>
+            <div class="detail-label">Phone</div>
+            <div class="detail-val">+91 8077476177</div>
+          </div>
+        </div>
+        <div class="detail-row">
+          <span class="detail-icon">🌐</span>
+          <div>
+            <div class="detail-label">Languages</div>
+            <div class="detail-val">English · Hindi · Japanese</div>
+          </div>
+        </div>
+        <div class="detail-row">
+          <span class="detail-icon">🤝</span>
+          <div>
+            <div class="detail-label">Soft Skills</div>
+            <div class="detail-val">Problem Solving · Team Collaboration · Adaptability · Communication</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<hr class="divider">
-
-<!-- ─── SKILLS ───────────────────────────────────── -->
-<section id="skills">
+<!-- ── SKILLS ──────────────────────────────────────── -->
+<section id="skills" class="section-alt">
   <div class="section-inner">
-    <div class="section-tag">Technical Skills</div>
-    <h2 class="section-title">What I Work With</h2>
+    <div class="section-eyebrow">Skills</div>
+    <h2 class="section-title">Technical Arsenal</h2>
+    <div class="skills-grid reveal">
 
-    <div class="reveal">
-
-      <div class="skills-group">
-        <div class="skills-group-title">☁️ Cloud Platforms</div>
+      <div class="skill-block">
+        <div class="skill-block-header">
+          <span class="skill-icon">☁️</span>
+          <span>Cloud Platforms</span>
+        </div>
         <div class="skill-tags">
-          <span class="skill-tag highlight">AWS EC2</span>
-          <span class="skill-tag highlight">AWS S3</span>
-          <span class="skill-tag highlight">IAM</span>
-          <span class="skill-tag highlight">Lambda</span>
-          <span class="skill-tag highlight">VPC</span>
-          <span class="skill-tag highlight">CloudWatch</span>
-          <span class="skill-tag highlight">Route 53</span>
-          <span class="skill-tag highlight">ALB</span>
+          <span class="tag tag-primary">EC2</span>
+          <span class="tag tag-primary">S3</span>
+          <span class="tag tag-primary">IAM</span>
+          <span class="tag tag-primary">Lambda</span>
+          <span class="tag tag-primary">VPC</span>
+          <span class="tag tag-primary">CloudWatch</span>
+          <span class="tag tag-primary">Route 53</span>
+          <span class="tag tag-primary">ALB</span>
+          <span class="tag tag-primary">SNS</span>
+          <span class="tag tag-primary">EventBridge</span>
         </div>
       </div>
 
-      <div class="skills-group">
-        <div class="skills-group-title">🔧 Infrastructure &amp; DevOps</div>
+      <div class="skill-block">
+        <div class="skill-block-header">
+          <span class="skill-icon">🔧</span>
+          <span>Infrastructure &amp; DevOps</span>
+        </div>
         <div class="skill-tags">
-          <span class="skill-tag">Terraform</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">Git</span>
-          <span class="skill-tag">GitHub</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Nginx</span>
         </div>
       </div>
 
-      <div class="skills-group">
-        <div class="skills-group-title">💻 Scripting Languages</div>
+      <div class="skill-block">
+        <div class="skill-block-header">
+          <span class="skill-icon">💻</span>
+          <span>Scripting</span>
+        </div>
         <div class="skill-tags">
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">Bash (Basics)</span>
+          <span class="tag">Python</span>
+          <span class="tag">Bash (Basics)</span>
         </div>
       </div>
 
-      <div class="skills-group">
-        <div class="skills-group-title">🗄️ Databases</div>
+      <div class="skill-block">
+        <div class="skill-block-header">
+          <span class="skill-icon">🗄️</span>
+          <span>Databases</span>
+        </div>
         <div class="skill-tags">
-          <span class="skill-tag">MySQL</span>
-          <span class="skill-tag">SQL</span>
-          <span class="skill-tag">MongoDB (Basics)</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">SQL</span>
+          <span class="tag">MongoDB (Basics)</span>
         </div>
       </div>
 
-      <div class="skills-group">
-        <div class="skills-group-title">🛠️ Support Tools</div>
+      <div class="skill-block">
+        <div class="skill-block-header">
+          <span class="skill-icon">🌐</span>
+          <span>Networking &amp; OS</span>
+        </div>
         <div class="skill-tags">
-          <span class="skill-tag">CloudWatch Logs</span>
-          <span class="skill-tag">grep</span>
-          <span class="skill-tag">journalctl</span>
-          <span class="skill-tag">Jira (Basic)</span>
+          <span class="tag">TCP/IP</span>
+          <span class="tag">DNS</span>
+          <span class="tag">HTTP/HTTPS</span>
+          <span class="tag">VPN</span>
+          <span class="tag">Subnetting</span>
+          <span class="tag">Linux (Ubuntu)</span>
+          <span class="tag">Windows Server Basics</span>
         </div>
       </div>
 
-      <div class="skills-group">
-        <div class="skills-group-title">🌐 Networking &amp; OS</div>
-        <div class="skill-tags">
-          <span class="skill-tag">TCP/IP</span>
-          <span class="skill-tag">DNS</span>
-          <span class="skill-tag">HTTP/HTTPS</span>
-          <span class="skill-tag">VPN</span>
-          <span class="skill-tag">Subnetting</span>
-          <span class="skill-tag">Linux (Ubuntu)</span>
-          <span class="skill-tag">Windows Server Basics</span>
+      <div class="skill-block">
+        <div class="skill-block-header">
+          <span class="skill-icon">🔄</span>
+          <span>CI/CD &amp; Tools</span>
         </div>
-      </div>
-
-      <div class="skills-group">
-        <div class="skills-group-title">🔄 CI/CD Tools</div>
         <div class="skill-tags">
-          <span class="skill-tag">GitHub Actions</span>
-          <span class="skill-tag">Jenkins (Basics)</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">Jenkins (Basics)</span>
+          <span class="tag">CloudWatch Logs</span>
+          <span class="tag">Jira (Basic)</span>
+          <span class="tag">grep</span>
+          <span class="tag">journalctl</span>
         </div>
       </div>
 
@@ -182,62 +243,94 @@
   </div>
 </section>
 
-<hr class="divider">
-
-<!-- ─── PROJECTS ─────────────────────────────────── -->
+<!-- ── PROJECTS ────────────────────────────────────── -->
 <section id="projects">
   <div class="section-inner">
-    <div class="section-tag">Projects</div>
+    <div class="section-eyebrow">Projects</div>
     <h2 class="section-title">What I've Built</h2>
-    <div class="projects-grid reveal">
+    <div class="projects-list reveal">
 
       <!-- Project 1 -->
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-title">🎬 Movie Ticket Booking App</div>
-          <a href="https://github.com/Rohit-singh-gusain/AWS-Terraform" target="_blank" class="project-link">↗ GitHub</a>
+      <div class="project-card featured">
+        <div class="project-top">
+          <div class="project-meta">
+            <span class="project-num">01</span>
+            <span class="project-badge">Serverless</span>
+          </div>
+          <a href="https://github.com/Rohit-singh-gusain/lambda-ec2-watchdog" target="_blank" class="project-link-btn">↗ GitHub</a>
         </div>
-        <div class="project-desc">
-          <ul>
-            <li>Deployed a full-stack booking app on AWS using EC2, VPC, ALB, Systems Manager Parameter Store, and Security Groups.</li>
-            <li>Built reusable Terraform modules from scratch for scalable IaC-based infrastructure provisioning.</li>
-            <li>Containerized the application with Docker for consistent deployment environments.</li>
-            <li>Configured custom domain mapped to ALB endpoint for public access.</li>
-            <li>Implemented public/private subnets and secure traffic routing in AWS VPC.</li>
-            <li>Set up SNS + CloudWatch alarms for automated CPU utilization email alerts.</li>
-          </ul>
-        </div>
-        <div class="project-tech">
-          <span class="tech-tag">AWS EC2</span>
-          <span class="tech-tag">VPC</span>
-          <span class="tech-tag">ALB</span>
-          <span class="tech-tag">Terraform</span>
-          <span class="tech-tag">Docker</span>
-          <span class="tech-tag">SNS</span>
-          <span class="tech-tag">CloudWatch</span>
-          <span class="tech-tag">Route 53</span>
+        <h3 class="project-title">AWS Lambda EC2 Cost Guardian</h3>
+        <p class="project-subtitle">EventBridge · Lambda · SNS · Terraform · Python</p>
+        <ul class="project-points">
+          <li>Built a fully serverless pipeline that automatically monitors running EC2 instances daily and sends detailed email alerts via SNS — solving the real problem of forgotten instances causing unexpected cloud bills.</li>
+          <li>Developed core Lambda function in Python using <code>boto3</code> to call <code>ec2:DescribeInstances</code>, extracting instance ID, name, type, region, AZ, running duration, and IP addresses.</li>
+          <li>Configured EventBridge cron rule for daily automated Lambda trigger — zero manual intervention, no server required.</li>
+          <li>Provisioned entire infrastructure using Terraform modular architecture — separate modules for IAM, Lambda, SNS, and EventBridge — fully reproducible with a single <code>terraform apply</code>.</li>
+          <li>Implemented IAM least privilege: Lambda role limited to only <code>ec2:DescribeInstances</code> and <code>sns:Publish</code> — zero hardcoded credentials.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag tag-primary">Lambda</span>
+          <span class="tag tag-primary">EventBridge</span>
+          <span class="tag tag-primary">SNS</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">Python</span>
+          <span class="tag">IAM</span>
+          <span class="tag">boto3</span>
         </div>
       </div>
 
       <!-- Project 2 -->
       <div class="project-card">
-        <div class="project-header">
-          <div class="project-title">🚀 Portfolio Deployment Pipeline</div>
-          <a href="https://github.com/Rohit-singh-gusain/CI-CD-Portfolio" target="_blank" class="project-link">↗ GitHub</a>
+        <div class="project-top">
+          <div class="project-meta">
+            <span class="project-num">02</span>
+            <span class="project-badge">Full Stack</span>
+          </div>
+          <a href="https://github.com/Rohit-singh-gusain/AWS-Terraform" target="_blank" class="project-link-btn">↗ GitHub</a>
         </div>
-        <div class="project-desc">
-          <ul>
-            <li>Provisioned AWS S3 static website hosting via Terraform IaC with reusable modules managing bucket policies, versioning, and public access config.</li>
-            <li>Automated deployment via GitHub Actions CI/CD pipeline — syncs portfolio files to S3 on every push to main branch, eliminating manual uploads.</li>
-            <li>Secured AWS credentials using GitHub Secrets ensuring zero hardcoded sensitive data across the codebase and pipeline.</li>
-          </ul>
+        <h3 class="project-title">Movie Ticket Booking App</h3>
+        <p class="project-subtitle">EC2 · VPC · ALB · Docker · Terraform · CloudWatch</p>
+        <ul class="project-points">
+          <li>Deployed a full-stack application on AWS using EC2, VPC, ALB, Systems Manager Parameter Store, and Security Groups.</li>
+          <li>Designed reusable Terraform modules for scalable IaC-based infrastructure provisioning.</li>
+          <li>Containerized the app with Docker; configured a custom domain mapped to ALB for public access.</li>
+          <li>Implemented public/private subnets and secure traffic routing within the AWS VPC environment.</li>
+          <li>Set up SNS + CloudWatch alarms for automated CPU utilization email notifications.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag tag-primary">EC2</span>
+          <span class="tag tag-primary">VPC</span>
+          <span class="tag tag-primary">ALB</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">CloudWatch</span>
+          <span class="tag">SNS</span>
+          <span class="tag">Route 53</span>
         </div>
-        <div class="project-tech">
-          <span class="tech-tag">AWS S3</span>
-          <span class="tech-tag">Terraform</span>
-          <span class="tech-tag">GitHub Actions</span>
-          <span class="tech-tag">CI/CD</span>
-          <span class="tech-tag">IaC</span>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-top">
+          <div class="project-meta">
+            <span class="project-num">03</span>
+            <span class="project-badge">CI/CD</span>
+          </div>
+          <a href="https://github.com/Rohit-singh-gusain/CI-CD-Portfolio" target="_blank" class="project-link-btn">↗ GitHub</a>
+        </div>
+        <h3 class="project-title">Portfolio Deployment CI/CD Pipeline</h3>
+        <p class="project-subtitle">AWS S3 · Terraform · GitHub Actions</p>
+        <ul class="project-points">
+          <li>Provisioned AWS S3 static website hosting via Terraform IaC with reusable modules managing bucket policies, versioning, and public access configuration.</li>
+          <li>Automated deployment via GitHub Actions CI/CD pipeline — syncs portfolio files to S3 on every push to main, eliminating manual uploads.</li>
+          <li>Secured AWS credentials using GitHub Secrets — zero hardcoded sensitive information across the entire codebase and pipeline.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag tag-primary">S3</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">IaC</span>
+          <span class="tag">CI/CD</span>
         </div>
       </div>
 
@@ -245,91 +338,130 @@
   </div>
 </section>
 
-<hr class="divider">
-
-<!-- ─── EXPERIENCE & EDUCATION ───────────────────── -->
-<section id="experience">
+<!-- ── CERTIFICATIONS ──────────────────────────────── -->
+<section id="certifications" class="section-alt">
   <div class="section-inner">
-    <div class="section-tag">Experience &amp; Education</div>
-    <h2 class="section-title">Background</h2>
-    <div class="timeline reveal">
+    <div class="section-eyebrow">Certifications</div>
+    <h2 class="section-title">Credentials</h2>
+    <div class="certs-grid reveal">
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
+      <div class="cert-card">
+        <div class="cert-icon">☁️</div>
         <div>
-          <div class="timeline-title">AWS Cloud Engineer</div>
-          <div class="timeline-meta">Fresher — Actively seeking first role</div>
-          <div class="timeline-desc">Built real-world cloud infrastructure projects independently, gaining hands-on experience with AWS services, Terraform IaC, Docker containerization, and CI/CD pipelines. Continuously learning and deploying production-like environments.</div>
-          <span class="timeline-badge">Open to Work</span>
+          <div class="cert-name">AWS Certified Cloud Practitioner</div>
+          <div class="cert-issuer">Amazon Web Services</div>
         </div>
+        <span class="cert-badge">Verified</span>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-dot" style="background: var(--green); box-shadow: 0 0 0 4px rgba(52,211,153,.15);"></div>
+      <div class="cert-card">
+        <div class="cert-icon">🇯🇵</div>
         <div>
-          <div class="timeline-title">Bachelor of Computer Applications (BCA)</div>
-          <div class="timeline-meta">Recent Graduate</div>
-          <div class="timeline-desc">Completed a BCA degree with a strong foundation in computer science fundamentals, networking, databases, and software development. Applied classroom knowledge through practical cloud and DevOps projects.</div>
-          <span class="timeline-badge" style="background: rgba(52,211,153,.1); border-color: rgba(52,211,153,.25); color: var(--green);">Graduated</span>
+          <div class="cert-name">JLPT N5</div>
+          <div class="cert-issuer">Japan Foundation — Japanese Language Proficiency</div>
         </div>
+        <span class="cert-badge">Verified</span>
       </div>
 
     </div>
   </div>
 </section>
 
-<hr class="divider">
-
-<!-- ─── CONTACT ──────────────────────────────────── -->
+<!-- ── CONTACT ─────────────────────────────────────── -->
 <section id="contact">
   <div class="section-inner">
-    <div class="section-tag">Contact</div>
+    <div class="section-eyebrow">Contact</div>
     <h2 class="section-title">Let's Connect</h2>
-    <div class="contact-wrap reveal">
-      <div class="contact-intro">
-        <p>I'm actively looking for cloud engineering or DevOps roles. Whether you have a job opportunity, project, or just want to talk tech — I'd love to hear from you.</p>
-        <br>
-        <p>Feel free to reach out via email or connect with me on LinkedIn and GitHub.</p>
-      </div>
-      <div class="contact-links">
-        <a href="mailto:rohitgusain9930@gmail.com" class="contact-link">
-          <div class="c-icon">✉️</div>
-          <div>
-            <div class="c-label">Email</div>
-            <div class="c-value">rohitgusain9930@gmail.com</div>
-          </div>
-        </a>
-        <a href="https://www.linkedin.com/in/rohit-singh-754a48257/" target="_blank" class="contact-link">
-          <div class="c-icon">💼</div>
-          <div>
-            <div class="c-label">LinkedIn</div>
-            <div class="c-value">rohit-singh-754a48257</div>
-          </div>
-        </a>
-        <a href="https://github.com/Rohit-singh-gusain" target="_blank" class="contact-link">
-          <div class="c-icon">🐙</div>
-          <div>
-            <div class="c-label">GitHub</div>
-            <div class="c-value">Rohit-singh-gusain</div>
-          </div>
-        </a>
-      </div>
+    <p class="contact-intro reveal">I'm actively looking for Cloud Engineer or DevOps Engineer roles. Whether it's a job opportunity, a project, or just a tech conversation — I'd love to hear from you.</p>
+    <div class="contact-cards reveal">
+
+      <a href="mailto:rohitgusain9930@gmail.com" class="contact-card">
+        <div class="contact-card-icon">✉️</div>
+        <div class="contact-card-label">Email</div>
+        <div class="contact-card-val">rohitgusain9930@gmail.com</div>
+      </a>
+
+      <a href="https://www.linkedin.com/in/rohit-singh-754a48257" target="_blank" class="contact-card">
+        <div class="contact-card-icon">💼</div>
+        <div class="contact-card-label">LinkedIn</div>
+        <div class="contact-card-val">rohit-singh-754a48257</div>
+      </a>
+
+      <a href="https://github.com/Rohit-singh-gusain" target="_blank" class="contact-card">
+        <div class="contact-card-icon">🐙</div>
+        <div class="contact-card-label">GitHub</div>
+        <div class="contact-card-val">Rohit-singh-gusain</div>
+      </a>
+
+      <a href="tel:+918077476177" class="contact-card">
+        <div class="contact-card-icon">📞</div>
+        <div class="contact-card-label">Phone</div>
+        <div class="contact-card-val">+91 8077476177</div>
+      </a>
+
     </div>
   </div>
 </section>
 
-<!-- ─── FOOTER ───────────────────────────────────── -->
+<!-- ── FOOTER ──────────────────────────────────────── -->
 <footer>
-  <p>Designed &amp; Built by <strong style="color: var(--accent)">Rohit Singh Gusain</strong> &nbsp;·&nbsp; AWS Cloud Engineer &nbsp;·&nbsp; 2025</p>
+  <div class="footer-inner">
+    <span class="footer-logo">RSG</span>
+    <span class="footer-copy">© 2025 Rohit Singh Gusain · AWS Cloud Engineer · Dehradun, IN</span>
+    <div class="footer-links">
+      <a href="https://github.com/Rohit-singh-gusain" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/rohit-singh-754a48257" target="_blank">LinkedIn</a>
+    </div>
+  </div>
 </footer>
 
-<!-- ─── SCROLL REVEAL SCRIPT ─────────────────────── -->
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
+<!-- ── CHATBOX ─────────────────────────────────────── -->
+<button class="chat-fab" id="chatFab" aria-label="Chat with AI assistant">
+  <span class="chat-fab-icon" id="fabIcon">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+  </span>
+  <span class="chat-fab-label">Ask me anything</span>
+</button>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <div class="chat-header-info">
+      <div class="chat-avatar">🤖</div>
+      <div>
+        <div class="chat-name">Rohit's AI Assistant</div>
+        <div class="chat-status"><span class="online-dot"></span>Powered by AWS Bedrock</div>
+      </div>
+    </div>
+    <button class="chat-close-btn" id="chatClose" aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg bot">
+      <div class="chat-bubble">
+        👋 Hi! I'm Rohit's AI assistant. Ask me anything about his skills, AWS projects, or how to reach him!
+      </div>
+    </div>
+    <div class="chat-suggestions">
+      <button class="suggestion-chip">What AWS services does Rohit know?</button>
+      <button class="suggestion-chip">Tell me about his projects</button>
+      <button class="suggestion-chip">Is he open to work?</button>
+      <button class="suggestion-chip">What certifications does he have?</button>
+    </div>
+  </div>
+
+  <div class="chat-input-wrap">
+    <input id="chatInput" class="chat-input" type="text" placeholder="Ask about skills, projects, experience…" autocomplete="off"/>
+    <button class="chat-send-btn" id="chatSend">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+  <div class="chat-powered">⚡ AWS Bedrock · Claude 3 Sonnet</div>
+</div>
+
+<!-- ── SCRIPTS ──────────────────────────────────────── -->
+<script src="script.js"></script>
 
 </body>
 </html>
