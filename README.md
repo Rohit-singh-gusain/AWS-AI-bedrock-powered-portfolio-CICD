@@ -81,6 +81,8 @@ User Browser
      │  AI Response
      └──────────────────► User Browser
 ```
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/023e3f45-b6f7-4dae-8111-e7da150d4c66" />
+
 
 ---
 
