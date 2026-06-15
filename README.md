@@ -180,6 +180,9 @@ The API Gateway endpoint URL is **automatically injected** into `script.js` duri
 # ScreenShots
 <img width="1573" height="1001" alt="image" src="https://github.com/user-attachments/assets/4be539ff-4992-46b7-ab0a-81130fbf2e3c" />
 
+<img width="449" height="616" alt="image" src="https://github.com/user-attachments/assets/5f0216e5-e14d-4df0-9246-930c472088c0" />
+
+
 
 
 ## 👤 Author
