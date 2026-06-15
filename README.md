@@ -178,6 +178,8 @@ The API Gateway endpoint URL is **automatically injected** into `script.js` duri
 | `S3_BUCKET_NAME` | Portfolio S3 bucket name |
 
 # ScreenShots
+<img width="1573" height="1001" alt="image" src="https://github.com/user-attachments/assets/4be539ff-4992-46b7-ab0a-81130fbf2e3c" />
+
 
 
 ## 👤 Author
